@@ -8,7 +8,9 @@ class NovelSpider(BaseSpider):
     allowed_domains = ["big5.zongheng.com"]
     start_urls = [
         "http://big5.zongheng.com/book/251393.html",
-        "http://book.zongheng.com/book/293409.html"
+        "http://book.zongheng.com/book/293409.html",
+        "http://big5.zongheng.com/book/247955.html",
+        
     ]
 
     def parse(self, response):
