@@ -40,6 +40,8 @@ class NovelPipeline(object):
         self.url_cache = dict()
 
     def process_item(self, item, spider):
+        if len(item) == 0:
+            return
         title = item['title'].pop().encode("utf-8")
         link_text = item['link_text'].pop().encode("utf-8")
         link = item['link'].pop().encode("utf-8")
