@@ -7,10 +7,8 @@ class NovelSpider(BaseSpider):
     name = "bubaizhanshen"
     allowed_domains = ["big5.zongheng.com"]
     start_urls = [
-        "http://big5.zongheng.com/book/251393.html",
-        "http://book.zongheng.com/book/293409.html",
-        "http://big5.zongheng.com/book/247955.html",
-        
+        "http://big5.zongheng.com/book/251393.html", # bu bai zhan shen
+        "http://book.zongheng.com/book/261594.html" # xian jie di yi shang fan
     ]
 
     def parse(self, response):
@@ -23,6 +21,7 @@ class NovelSpider(BaseSpider):
 
        sites = hxs.select('//div[@class="fir"]')
        items = []
+
        for site in sites:
            item = NovelItem()
            item['title'] = title
